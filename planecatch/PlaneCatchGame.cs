@@ -19,12 +19,10 @@ namespace planecatch
     public class PlaneCatchGame : Microsoft.Xna.Framework.Game
     {
         GraphicsDeviceManager _graphics;
-        SpriteBatch _spriteBatch;
-        Model _chaozeira;
-        float aspectRatio;
-        Vector3 modelPosition = Vector3.Zero;
-        float modelRotation = 0.0f;
-        Vector3 cameraPosition = new Vector3(0.0f, 50.0f, 5000.0f);
+
+        public Camera Camera { get; set; }
+        public ModelManager ModelManager { get; set; }
+
 
         public PlaneCatchGame()
         {
@@ -42,6 +40,12 @@ namespace planecatch
         {
             // TODO: Add your initialization logic here
 
+            Camera = new Camera(this, new Vector3(0,0,50), Vector3.Zero, Vector3.Up);
+            ModelManager = new ModelManager(this);
+
+            Components.Add(Camera);
+            Components.Add(ModelManager);
+
             base.Initialize();
         }
 
@@ -52,12 +56,7 @@ namespace planecatch
         protected override void LoadContent()
         {
             // Create a new SpriteBatch, which can be used to draw textures.
-            _spriteBatch = new SpriteBatch(GraphicsDevice);
-
-
-            _chaozeira = Content.Load<Model>("chaozeira");
-            aspectRatio = (float)_graphics.GraphicsDevice.Viewport.Width /
-            (float)_graphics.GraphicsDevice.Viewport.Height;
+            //_spriteBatch = new SpriteBatch(GraphicsDevice);
             
 
             // TODO: use this.Content to load your game content here
@@ -79,12 +78,7 @@ namespace planecatch
         /// <param name="gameTime">Provides a snapshot of timing values.</param>
         protected override void Update(GameTime gameTime)
         {
-            // Allows the game to exit
-            if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed)
-                this.Exit();
-
             // TODO: Add your update logic here
-
             base.Update(gameTime);
         }
 
@@ -94,29 +88,8 @@ namespace planecatch
         /// <param name="gameTime">Provides a snapshot of timing values.</param>
         protected override void Draw(GameTime gameTime)
         {
-
             _graphics.GraphicsDevice.Clear(Color.CornflowerBlue);
 
-            // Copy any parent transforms.
-            Matrix[] transforms = new Matrix[_chaozeira.Bones.Count];
-            _chaozeira.CopyAbsoluteBoneTransformsTo(transforms);
-
-            // Draw the model. A model can have multiple meshes, so loop.
-            foreach (ModelMesh mesh in _chaozeira.Meshes)
-            {
-                // This is where the mesh orientation is set, as well as our camera and projection.
-                foreach (BasicEffect effect in mesh.Effects)
-                {
-                    effect.EnableDefaultLighting();
-                    effect.World = transforms[mesh.ParentBone.Index] * Matrix.CreateRotationY(modelRotation)
-                        * Matrix.CreateTranslation(modelPosition);
-                    effect.View = Matrix.CreateLookAt(cameraPosition, Vector3.Zero, Vector3.Up);
-                    effect.Projection = Matrix.CreatePerspectiveFieldOfView(MathHelper.ToRadians(45.0f),
-                        aspectRatio, 1.0f, 10000.0f);
-                }
-                // Draw the mesh, using the effects set above.
-                mesh.Draw();
-            }
             base.Draw(gameTime);
         }
     }
