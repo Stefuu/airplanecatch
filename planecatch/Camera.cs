@@ -17,19 +17,18 @@ namespace planecatch
         private Vector3 Direction { get; set; }
         private Vector3 Up { get; set; }
         private MouseState _previousMouseState;
-        
 
-
-        private const float Speed = 3;
+        private const float Speed = 0.5f;
 
         public override void Initialize()
         {
             base.Initialize();
 
-            Mouse.SetPosition(Game.Window.ClientBounds.Width / 2, this.Game.Window.ClientBounds.Height / 2);
+            ResetMouse();
+
             _previousMouseState = Mouse.GetState();
         }
-        
+
         public Camera(Game game, Vector3 position, Vector3 target, Vector3 up) : base(game)
         {
             Position = position;
@@ -53,19 +52,53 @@ namespace planecatch
 
         public override void Update(GameTime gameTime)
         {
-            InputHelper.ExecuteIfKeyPressed(Keys.W, () => Position += Direction * Speed);
-            InputHelper.ExecuteIfKeyPressed(Keys.S, () => Position -= Direction * Speed);
-            InputHelper.ExecuteIfKeyPressed(Keys.A, () => Position += Vector3.Cross(Up, Direction) * Speed);
-            InputHelper.ExecuteIfKeyPressed(Keys.D, () => Position -= Vector3.Cross(Up, Direction) * Speed);
+            //Para o jogador não ficar voando, é necessário remover todo o valor y da direção pra onde ele vai andar.
+            //Para que a velocidade dele não caia, é preciso adicionar no x o que foi tirado do y;
+            var walkingDirection = Direction + new Vector3(Direction.Y, -Direction.Y, 0);
 
-            Direction = Vector3.Transform(Direction,
-                Matrix.CreateFromAxisAngle(Up,
-                (-MathHelper.PiOver4 / 150) * (Mouse.GetState().X - _previousMouseState.X)));
+            //Para andar de lado, preciso achar o vetor que aponta o lado.
+            //Para isso, basta encontrar o produto vetorial entre o vetor Up e o vetor que aponta a direção do target.
+            var sideVector = Vector3.Cross(Up, walkingDirection);
+
+            InputHelper.ExecuteIfKeyPressed(Keys.W, () => Position += walkingDirection * Speed);
+            InputHelper.ExecuteIfKeyPressed(Keys.S, () => Position -= walkingDirection * Speed);
+            InputHelper.ExecuteIfKeyPressed(Keys.A, () => Position += sideVector * Speed);
+            InputHelper.ExecuteIfKeyPressed(Keys.D, () => Position -= sideVector * Speed);
+
+            Yaw();
+            Pitch();
             
             CreateLookAt();
 
+            ResetMouse();
 
             base.Update(gameTime);
+        }
+
+        private void Pitch()
+        {
+            var angle = (MathHelper.PiOver4 / 150) * (Mouse.GetState().Y - _previousMouseState.Y);
+
+            Direction = Vector3.Transform(Direction,
+                                          Matrix.CreateFromAxisAngle(Vector3.Cross(Up, Direction) * Speed,
+                                                                    angle));
+        }
+
+        private void Yaw()
+        {
+            var angle = (-MathHelper.PiOver4 / 150) * (Mouse.GetState().X - _previousMouseState.X);
+
+            Direction = Vector3.Transform(Direction,
+                                          Matrix.CreateFromAxisAngle(Up,
+                                                                    angle));
+        }
+
+        private void ResetMouse()
+        {
+            var middleWidth = Game.Window.ClientBounds.Width / 2;
+            var middleHeight = Game.Window.ClientBounds.Height / 2;
+
+            Mouse.SetPosition(middleWidth, middleHeight);
         }
     }
 }

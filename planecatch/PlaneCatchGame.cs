@@ -78,6 +78,8 @@ namespace planecatch
         /// <param name="gameTime">Provides a snapshot of timing values.</param>
         protected override void Update(GameTime gameTime)
         {
+            InputHelper.ExecuteIfKeyPressed(Keys.Escape, Exit);
+
             // TODO: Add your update logic here
             base.Update(gameTime);
         }
