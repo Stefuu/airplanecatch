@@ -32,7 +32,7 @@ namespace planecatch
         public Camera(Game game, Vector3 position, Vector3 target, Vector3 up) : base(game)
         {
             Position = position;
-            Direction = position - target;
+            Direction = target - position;
             Direction = Vector3.Normalize(Direction);
             Up = up;
 

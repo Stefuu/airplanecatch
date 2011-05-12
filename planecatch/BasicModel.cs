@@ -39,9 +39,9 @@ namespace planecatch
                     effect.EnableDefaultLighting();
                     effect.Projection = camera.Projection;
                     effect.View = camera.View;
-                    effect.World = GetWorld() * mesh.ParentBone.Transform * Matrix.CreateTranslation(Vector3.Zero);
+                    effect.World = GetWorld() * mesh.ParentBone.Transform;
                 }
-             
+
                 mesh.Draw();
             }
 
