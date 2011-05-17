@@ -8,6 +8,12 @@ namespace planecatch
 {
     public static class InputHelper
     {
+        public static void ExecuteIf(Func<KeyboardState, bool> condition, Action action)
+        {
+            if (condition(Keyboard.GetState()))
+                action();
+        }
+
         public static void ExecuteIfKeyPressed(Keys k, Action action)
         {
             if (Keyboard.GetState().IsKeyDown(k))
