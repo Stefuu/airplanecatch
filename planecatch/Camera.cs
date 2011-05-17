@@ -13,21 +13,49 @@ namespace planecatch
         public Matrix View { get; set; }
         public Matrix Projection { get; set; }
         public Vector3 Position { get; set; }
+        public IPlayerState CurrentState { get; set; }
+
 
         private Vector3 Direction { get; set; }
         private Vector3 Up { get; set; }
         private Vector3 SideVector
         {
+            //Para andar de lado, basta encontrar o produto vetorial entre o vetor Up e o vetor que aponta a direção do target.
             get { return Vector3.Cross(Up, WalkingDirection); }
         }
         private Vector3 WalkingDirection
         {
+            //Para o jogador não ficar voando, é necessário remover todo o valor y da direção pra onde ele vai andar.
+            //Para que a velocidade dele não caia, é preciso adicionar no x o que foi tirado do y;
             get { return Direction + new Vector3(Direction.Y, -Direction.Y, 0); }
         }
 
         private MouseState _previousMouseState;
+        private IPlayerState _walkingState;
+        private IPlayerState _runningState;
+        
+        public Camera(Game game, Vector3 position, Vector3 target, Vector3 up) : base(game)
+        {
+            Position = position;
+            Direction = position - target;
+            Direction = Vector3.Normalize(Direction);
+            Up = up;
 
-        private const float Speed = 0.5f;
+            InitializeStates();
+
+            CreateLookAt();
+
+            var aspectRatio = game.Window.ClientBounds.Width / (float)game.Window.ClientBounds.Height;
+
+            Projection = Matrix.CreatePerspectiveFieldOfView(MathHelper.PiOver4,
+                                                             aspectRatio, 1, 3000);
+        }
+
+        private void InitializeStates()
+        {
+            _walkingState = new Walking();
+            _runningState = new Running();
+        }
 
         public override void Initialize()
         {
@@ -38,22 +66,7 @@ namespace planecatch
             _previousMouseState = Mouse.GetState();
         }
 
-        public Camera(Game game, Vector3 position, Vector3 target, Vector3 up) : base(game)
-        {
-            Position = position;
-            Direction = position - target;
-            Direction = Vector3.Normalize(Direction);
-            Up = up;
-
-            CreateLookAt();
-
-            var aspectRatio = game.Window.ClientBounds.Width / (float)game.Window.ClientBounds.Height;
-
-            Projection = Matrix.CreatePerspectiveFieldOfView(MathHelper.PiOver4,
-                                                             aspectRatio, 1, 3000);
-        }
-
-        public void CreateLookAt()
+        private void CreateLookAt()
         {
             var target = Position + Direction;
             View = Matrix.CreateLookAt(Position, target, Up);
@@ -61,16 +74,22 @@ namespace planecatch
 
         public override void Update(GameTime gameTime)
         {
-            //Para o jogador não ficar voando, é necessário remover todo o valor y da direção pra onde ele vai andar.
-            //Para que a velocidade dele não caia, é preciso adicionar no x o que foi tirado do y;
 
-            //Para andar de lado, preciso achar o vetor que aponta o lado.
-            //Para isso, basta encontrar o produto vetorial entre o vetor Up e o vetor que aponta a direção do target.
+            //Se algum shift estiver pressionado, o jogador está correndo.
+            InputHelper.ExecuteIf(
+                (s) => s.IsKeyDown(Keys.LeftShift) || s.IsKeyDown(Keys.RightShift),
+                ToRunningState
+                );
+            
+            InputHelper.ExecuteIf(
+                            (s) => s.IsKeyUp(Keys.LeftShift) && s.IsKeyUp(Keys.RightShift),
+                            ToWalkingState
+                            );
 
-            InputHelper.ExecuteIfKeyPressed(Keys.W, () => Position += WalkingDirection * Speed);
-            InputHelper.ExecuteIfKeyPressed(Keys.S, () => Position -= WalkingDirection * Speed);
-            InputHelper.ExecuteIfKeyPressed(Keys.A, () => Position += SideVector * Speed);
-            InputHelper.ExecuteIfKeyPressed(Keys.D, () => Position -= SideVector * Speed);
+            InputHelper.ExecuteIfKeyPressed(Keys.W, () => Position += WalkingDirection * CurrentState.Speed);
+            InputHelper.ExecuteIfKeyPressed(Keys.S, () => Position -= WalkingDirection * CurrentState.Speed);
+            InputHelper.ExecuteIfKeyPressed(Keys.A, () => Position += SideVector * CurrentState.Speed);
+            InputHelper.ExecuteIfKeyPressed(Keys.D, () => Position -= SideVector * CurrentState.Speed);
 
             Yaw();
             Pitch();
@@ -82,12 +101,22 @@ namespace planecatch
             base.Update(gameTime);
         }
 
+        private void ToRunningState()
+        {
+            CurrentState = _runningState;
+        }
+
+        private void ToWalkingState()
+        {
+            CurrentState = _walkingState;
+        }
+
         private void Pitch()
         {
             var angle = (MathHelper.PiOver4 / 150) * (Mouse.GetState().Y - _previousMouseState.Y);
 
             Direction = Vector3.Transform(Direction,
-                                          Matrix.CreateFromAxisAngle(Vector3.Cross(Up, Direction) * Speed,
+                                          Matrix.CreateFromAxisAngle(Vector3.Cross(Up, Direction) * CurrentState.Speed,
                                                                     angle));
         }
 
