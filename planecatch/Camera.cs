@@ -16,6 +16,15 @@ namespace planecatch
 
         private Vector3 Direction { get; set; }
         private Vector3 Up { get; set; }
+        private Vector3 SideVector
+        {
+            get { return Vector3.Cross(Up, WalkingDirection); }
+        }
+        private Vector3 WalkingDirection
+        {
+            get { return Direction + new Vector3(Direction.Y, -Direction.Y, 0); }
+        }
+
         private MouseState _previousMouseState;
 
         private const float Speed = 0.5f;
@@ -54,16 +63,14 @@ namespace planecatch
         {
             //Para o jogador não ficar voando, é necessário remover todo o valor y da direção pra onde ele vai andar.
             //Para que a velocidade dele não caia, é preciso adicionar no x o que foi tirado do y;
-            var walkingDirection = Direction + new Vector3(Direction.Y, -Direction.Y, 0);
 
             //Para andar de lado, preciso achar o vetor que aponta o lado.
             //Para isso, basta encontrar o produto vetorial entre o vetor Up e o vetor que aponta a direção do target.
-            var sideVector = Vector3.Cross(Up, walkingDirection);
 
-            InputHelper.ExecuteIfKeyPressed(Keys.W, () => Position += walkingDirection * Speed);
-            InputHelper.ExecuteIfKeyPressed(Keys.S, () => Position -= walkingDirection * Speed);
-            InputHelper.ExecuteIfKeyPressed(Keys.A, () => Position += sideVector * Speed);
-            InputHelper.ExecuteIfKeyPressed(Keys.D, () => Position -= sideVector * Speed);
+            InputHelper.ExecuteIfKeyPressed(Keys.W, () => Position += WalkingDirection * Speed);
+            InputHelper.ExecuteIfKeyPressed(Keys.S, () => Position -= WalkingDirection * Speed);
+            InputHelper.ExecuteIfKeyPressed(Keys.A, () => Position += SideVector * Speed);
+            InputHelper.ExecuteIfKeyPressed(Keys.D, () => Position -= SideVector * Speed);
 
             Yaw();
             Pitch();
