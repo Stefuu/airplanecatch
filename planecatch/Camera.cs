@@ -74,22 +74,8 @@ namespace planecatch
 
         public override void Update(GameTime gameTime)
         {
-
             //Se algum shift estiver pressionado, o jogador está correndo.
-            InputHelper.ExecuteIf(
-                (s) => s.IsKeyDown(Keys.LeftShift) || s.IsKeyDown(Keys.RightShift),
-                ToRunningState
-                );
-            
-            InputHelper.ExecuteIf(
-                            (s) => s.IsKeyUp(Keys.LeftShift) && s.IsKeyUp(Keys.RightShift),
-                            ToWalkingState
-                            );
-
-            InputHelper.ExecuteIfKeyPressed(Keys.W, () => Position += WalkingDirection * CurrentState.Speed);
-            InputHelper.ExecuteIfKeyPressed(Keys.S, () => Position -= WalkingDirection * CurrentState.Speed);
-            InputHelper.ExecuteIfKeyPressed(Keys.A, () => Position += SideVector * CurrentState.Speed);
-            InputHelper.ExecuteIfKeyPressed(Keys.D, () => Position -= SideVector * CurrentState.Speed);
+            HandleInput();
 
             Yaw();
             Pitch();
@@ -99,6 +85,25 @@ namespace planecatch
             ResetMouse();
 
             base.Update(gameTime);
+        }
+
+        private void HandleInput()
+        {
+            InputHelper.ExecuteIf(
+                (s) => s.IsKeyDown(Keys.LeftShift) || s.IsKeyDown(Keys.RightShift),
+                ToRunningState
+                );
+            
+            //Se os dois shifts estiverem soltos, o jogador está andando.
+            InputHelper.ExecuteIf(
+                (s) => s.IsKeyUp(Keys.LeftShift) && s.IsKeyUp(Keys.RightShift),
+                ToWalkingState
+                );
+
+            InputHelper.ExecuteIfKeyPressed(Keys.W, () => Position += WalkingDirection * CurrentState.Speed);
+            InputHelper.ExecuteIfKeyPressed(Keys.S, () => Position -= WalkingDirection * CurrentState.Speed);
+            InputHelper.ExecuteIfKeyPressed(Keys.A, () => Position += SideVector * CurrentState.Speed);
+            InputHelper.ExecuteIfKeyPressed(Keys.D, () => Position -= SideVector * CurrentState.Speed);
         }
 
         private void ToRunningState()
