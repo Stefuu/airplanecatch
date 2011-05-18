@@ -22,6 +22,7 @@ namespace planecatch
 
         public Camera Camera { get; set; }
         public ModelManager ModelManager { get; set; }
+        public InputHelper InputHelper { get; set; }
 
 
         public PlaneCatchGame()
@@ -42,9 +43,11 @@ namespace planecatch
 
             Camera = new Camera(this, new Vector3(0,0,50), Vector3.Zero, Vector3.Up);
             ModelManager = new ModelManager(this);
+            this.InputHelper = new InputHelper(this);
 
             Components.Add(Camera);
             Components.Add(ModelManager);
+            Components.Add(this.InputHelper);
 
             base.Initialize();
         }

@@ -2,22 +2,44 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Input;
 
 namespace planecatch
 {
-    public static class InputHelper
+    public class InputHelper : GameComponent
     {
-        public static void ExecuteIf(Func<KeyboardState, bool> condition, Action action)
+        private KeyboardState _lastState;
+        private KeyboardState _currentState;
+
+        public InputHelper(Game game) : base(game)
         {
-            if (condition(Keyboard.GetState()))
+        }
+
+        public void ExecuteIf(Func<KeyboardState, bool> condition, Action action)
+        {
+            if (condition(_currentState))
                 action();
         }
 
-        public static void ExecuteIfKeyPressed(Keys k, Action action)
+        public void ExecuteIfKeyPressed(Keys k, Action action)
         {
-            if (Keyboard.GetState().IsKeyDown(k))
+            if (_currentState.IsKeyDown(k))
                 action();
+        }
+
+        public void ExecuteIfJustPressed(Keys key, Action action)
+        {
+            if (_lastState.IsKeyUp(key) && _currentState.IsKeyDown(key))
+                action();
+        }
+
+        public override void Update(GameTime gameTime)
+        {
+            _lastState = _currentState;
+            _currentState = Keyboard.GetState();
+
+            base.Update(gameTime);
         }
     }
 }
