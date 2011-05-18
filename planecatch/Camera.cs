@@ -45,6 +45,11 @@ namespace planecatch
 
             CreateLookAt();
 
+            InitializeProjection(game);
+        }
+
+        private void InitializeProjection(Game game)
+        {
             var aspectRatio = game.Window.ClientBounds.Width / (float)game.Window.ClientBounds.Height;
 
             Projection = Matrix.CreatePerspectiveFieldOfView(MathHelper.PiOver4,
