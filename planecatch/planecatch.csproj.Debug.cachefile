@@ -1,10 +1,8 @@
 Content\chaozeira.xnb
 Content\cubo.xnb
-Content\Models\TexturedCube.xnb
-Content\Models\floor.xnb
 Content\Textures\cyberpunk.xnb
 Content\Textures\floor.xnb
-Content\cyberpunk_0.xnb
-Content\Textures\floor_0.xnb
 Content\Textures\airport.xnb
+Content\Models\airport.xnb
 Content\Textures\airport_0.xnb
+Content\Textures\floor_0.xnb

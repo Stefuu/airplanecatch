@@ -40,8 +40,7 @@ namespace planecatch
 
         protected override void LoadContent()
         {
-            _models.Add(new BasicModel(Game.Content.Load<Model>("Models\\TexturedCube")));
-            _models.Add(new BasicModel(Game.Content.Load<Model>("Models\\floor")));
+            _models.Add(new BasicModel(Game.Content.Load<Model>("Models\\airport")));
 
             base.LoadContent();
         }
