@@ -49,13 +49,6 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Models\TexturedCube.fbx">
-      <Name>TexturedCube</Name>
-      <Importer>FbxImporter</Importer>
-      <Processor>ModelProcessor</Processor>
-    </Compile>
-  </ItemGroup>
-  <ItemGroup>
     <Compile Include="Textures\cyberpunk.jpg">
       <Name>cyberpunk</Name>
       <Importer>TextureImporter</Importer>
@@ -63,8 +56,8 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Models\floor.fbx">
-      <Name>floor</Name>
+    <Compile Include="Models\airport.fbx">
+      <Name>airport</Name>
       <Importer>FbxImporter</Importer>
       <Processor>ModelProcessor</Processor>
     </Compile>

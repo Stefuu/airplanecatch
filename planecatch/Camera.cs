@@ -30,13 +30,14 @@ namespace planecatch
             get { return TargetDirection + new Vector3(TargetDirection.Y, -TargetDirection.Y, 0); }
         }
 
-        private Vector3 Velocity { get; set; }
+        public Vector3 Velocity { get; set; }
+
+        public bool Jumping { get; set; }
 
         private MouseState _previousMouseState;
         private IPlayerState _walkingState;
         private IPlayerState _runningState;
-        private bool _jumping;
-        private readonly Vector3 _gravityAccel = new Vector3(0, 0.7f, 0);
+        
         
         public Camera(Game game, Vector3 position, Vector3 target, Vector3 up) : base(game)
         {
@@ -113,7 +114,7 @@ namespace planecatch
         private void Jump()
         {
             Velocity += new Vector3(0, 10, 0);
-            _jumping = true;
+            Jumping = true;
         }
 
         private void StrafeRight()
@@ -150,14 +151,6 @@ namespace planecatch
         {
             Position += Velocity;
             ResetVelocity();
-        }
-
-        private void ApplyGravity()
-        {
-            if(_jumping)
-            {
-                Velocity -= _gravityAccel;
-            }
         }
 
         private void ToRunningState()
@@ -209,8 +202,6 @@ namespace planecatch
         {
             HandleInput();
 
-            ApplyGravity();
-
             UpdatePosition();
 
             CheckCollision();
@@ -231,7 +222,7 @@ namespace planecatch
 
             Velocity = new Vector3(Velocity.X, 0, Velocity.Z);
             Position = new Vector3(Position.X, 0, Position.Z);
-            _jumping = false;
+            Jumping = false;
         }
     }
 }
