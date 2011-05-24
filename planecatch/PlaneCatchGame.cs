@@ -24,6 +24,7 @@ namespace planecatch
         public ModelManager ModelManager { get; set; }
         public InputHelper InputHelper { get; set; }
         public Gravity Gravity { get; set; }
+        public Collision Collision { get; set; }
 
 
         public PlaneCatchGame()
@@ -46,14 +47,18 @@ namespace planecatch
             ModelManager = new ModelManager(this);
             InputHelper = new InputHelper(this);
             Gravity = new Gravity(this);
+            Collision = new Collision(this);
 
             Components.Add(Camera);
             Components.Add(ModelManager);
             Components.Add(InputHelper);
             Components.Add(Gravity);
+            Components.Add(Collision);
 
             base.Initialize();
         }
+
+        
 
         /// <summary>
         /// LoadContent will be called once per game and is the place to load

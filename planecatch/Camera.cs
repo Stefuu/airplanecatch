@@ -204,8 +204,6 @@ namespace planecatch
 
             UpdatePosition();
 
-            CheckCollision();
-
             Yaw();
             Pitch();
 
@@ -214,15 +212,6 @@ namespace planecatch
             ResetMouse();
 
             base.Update(gameTime);
-        }
-
-        private void CheckCollision()
-        {
-            if (Position.Y > 0) return;
-
-            Velocity = new Vector3(Velocity.X, 0, Velocity.Z);
-            Position = new Vector3(Position.X, 0, Position.Z);
-            Jumping = false;
         }
     }
 }

@@ -86,6 +86,7 @@
   <ItemGroup>
     <Compile Include="BasicModel.cs" />
     <Compile Include="Camera.cs" />
+    <Compile Include="Collision.cs" />
     <Compile Include="Gravity.cs" />
     <Compile Include="InputHelper.cs" />
     <Compile Include="IPlayerState.cs" />
