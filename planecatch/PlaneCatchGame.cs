@@ -41,7 +41,7 @@ namespace planecatch
         {
             // TODO: Add your initialization logic here
 
-            Camera = new Camera(this, new Vector3(0,0,50), Vector3.Zero, Vector3.Up);
+            Camera = new Camera(this, new Vector3(0,1.6f,50), Vector3.Zero, Vector3.Up);
             ModelManager = new ModelManager(this);
             this.InputHelper = new InputHelper(this);
 
