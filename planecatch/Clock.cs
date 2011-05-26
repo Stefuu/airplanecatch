@@ -25,7 +25,11 @@ namespace planecatch
             var current = GetRemainingTime(gameTime);
 
             if (current <= TimeSpan.Zero)
-                //Adicionar código para terminar o jogo.
+            {
+                var gameLostMessage = new GameLostMessage(Game);
+                ((PlaneCatchGame) Game).CurrentMessage = gameLostMessage;
+                ((PlaneCatchGame) Game).Components.Add(gameLostMessage);
+            }
 
             base.Update(gameTime);
         }

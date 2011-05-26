@@ -25,9 +25,9 @@ namespace planecatch
         public InputHelper InputHelper { get; set; }
         public Gravity Gravity { get; set; }
         public Collision Collision { get; set; }
-
         public Clock Clock { get; set; }
-
+        public DrawableGameComponent CurrentMessage { get; set; }
+        public WinningConditionChecker WinningConditionChecker { get; set; }
 
         public PlaneCatchGame()
         {
@@ -51,6 +51,9 @@ namespace planecatch
             Gravity = new Gravity(this);
             Collision = new Collision(this);
             Clock = new Clock(this);
+            CurrentMessage = new DefaultMessage(this);
+            WinningConditionChecker = new WinningConditionChecker(this);
+
 
             Camera.UpdateOrder = 0;
             ModelManager.UpdateOrder = 1;
@@ -58,6 +61,8 @@ namespace planecatch
             Gravity.UpdateOrder = 3;
             Collision.UpdateOrder = 4;
             Clock.UpdateOrder = 5;
+            CurrentMessage.UpdateOrder = 6;
+            WinningConditionChecker.UpdateOrder = 7;
 
             Components.Add(Camera);
             Components.Add(ModelManager);
@@ -65,11 +70,11 @@ namespace planecatch
             Components.Add(Gravity);
             Components.Add(Collision);
             Components.Add(Clock);
+            Components.Add(CurrentMessage);
+            Components.Add(WinningConditionChecker);
 
             base.Initialize();
         }
-
-        
 
         /// <summary>
         /// LoadContent will be called once per game and is the place to load

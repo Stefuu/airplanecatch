@@ -133,6 +133,46 @@
       <Processor>FontDescriptionProcessor</Processor>
     </Compile>
   </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Textures\airport\Translucent_Glass_Sky_Reflection.jpg">
+      <Name>Translucent_Glass_Sky_Reflection</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Textures\paredeDeitada\Brick_Antique.jpg">
+      <Name>Brick_Antique</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Textures\paredeDeitada\Cladding_Siding_Tan.jpg">
+      <Name>Cladding_Siding_Tan</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Textures\paredeEmPe\Brick_Antique.jpg">
+      <Name>Brick_Antique</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Models\paredeEmPe.fbx">
+      <Name>paredeEmPe</Name>
+      <Importer>FbxImporter</Importer>
+      <Processor>PerMeshBoundingBoxContentProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Models\paredeDeitada.fbx">
+      <Name>paredeDeitada</Name>
+      <Importer>FbxImporter</Importer>
+      <Processor>PerMeshBoundingBoxContentProcessor</Processor>
+    </Compile>
+  </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Microsoft\XNA Game Studio\v3.0\Microsoft.Xna.GameStudio.ContentPipeline.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
