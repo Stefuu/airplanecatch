@@ -26,6 +26,8 @@ namespace planecatch
         public Gravity Gravity { get; set; }
         public Collision Collision { get; set; }
 
+        public Clock Clock { get; set; }
+
 
         public PlaneCatchGame()
         {
@@ -48,12 +50,21 @@ namespace planecatch
             InputHelper = new InputHelper(this);
             Gravity = new Gravity(this);
             Collision = new Collision(this);
+            Clock = new Clock(this);
+
+            Camera.UpdateOrder = 0;
+            ModelManager.UpdateOrder = 1;
+            InputHelper.UpdateOrder = 2;
+            Gravity.UpdateOrder = 3;
+            Collision.UpdateOrder = 4;
+            Clock.UpdateOrder = 5;
 
             Components.Add(Camera);
             Components.Add(ModelManager);
             Components.Add(InputHelper);
             Components.Add(Gravity);
             Components.Add(Collision);
+            Components.Add(Clock);
 
             base.Initialize();
         }
