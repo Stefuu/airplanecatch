@@ -17,10 +17,10 @@ namespace planecatch
 
 
             //TODO: Alterar de 0 para o y do objeto diretamente abaixo.
-            if (player.Position.Y > 0) return;
+            if (player.Position.Y > 1.6f) return;
 
             player.Velocity = new Vector3(player.Velocity.X, 0, player.Velocity.Z);
-            player.Position = new Vector3(player.Position.X, 0, player.Position.Z);
+            player.Position = new Vector3(player.Position.X, 1.6f, player.Position.Z);
             player.Jumping = false;
 
             base.Update(gameTime);
