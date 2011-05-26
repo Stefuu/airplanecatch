@@ -40,6 +40,7 @@ namespace planecatch
 
         protected override void LoadContent()
         {
+            _models.Add(new Skybox(Game.Content.Load<Model>("Models\\skybox")));
             _models.Add(new BasicModel(Game.Content.Load<Model>("Models\\airport")));
 
             base.LoadContent();
@@ -63,7 +64,7 @@ namespace planecatch
         {
             foreach (var basicModel in _models)
             {
-                basicModel.Draw(((PlaneCatchGame) Game).Camera);
+                basicModel.Draw(((PlaneCatchGame)Game).Camera, Game.GraphicsDevice);
             }
 
             base.Draw(gameTime);

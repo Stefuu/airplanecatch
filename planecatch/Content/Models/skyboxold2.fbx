@@ -1,0 +1,924 @@
+; FBX 6.1.0 project file
+; Copyright (C) 1997-2008 Autodesk Inc. and/or its licensors.
+; All rights reserved.
+; ----------------------------------------------------
+
+FBXHeaderExtension:  {
+    FBXHeaderVersion: 1003
+    FBXVersion: 6100
+    CreationTimeStamp:  {
+        Version: 1000
+        Year: 2011
+        Month: 5
+        Day: 25
+        Hour: 21
+        Minute: 35
+        Second: 40
+        Millisecond: 846
+    }
+    Creator: "FBX SDK/FBX Plugins version 2009.1"
+    OtherFlags:  {
+        FlagPLE: 0
+    }
+}
+CreationTime: "2011-05-25 21:35:40:846"
+Creator: "FBX SDK/FBX Plugins build 20080516"
+
+; Document Description
+;------------------------------------------------------------------
+
+Document:  {
+    Name: ""
+}
+
+; Document References
+;------------------------------------------------------------------
+
+References:  {
+}
+
+; Object definitions
+;------------------------------------------------------------------
+
+Definitions:  {
+    Version: 100
+    Count: 23
+    ObjectType: "Model" {
+        Count: 2
+    }
+    ObjectType: "Material" {
+        Count: 7
+    }
+    ObjectType: "Texture" {
+        Count: 6
+    }
+    ObjectType: "Video" {
+        Count: 6
+    }
+    ObjectType: "SceneInfo" {
+        Count: 1
+    }
+    ObjectType: "GlobalSettings" {
+        Count: 1
+    }
+}
+
+; Object properties
+;------------------------------------------------------------------
+
+Objects:  {
+    Model: "Model::Model", "Null" {
+        Version: 232
+        Properties60:  {
+            Property: "QuaternionInterpolate", "bool", "",0
+            Property: "RotationOffset", "Vector3D", "",0,0,0
+            Property: "RotationPivot", "Vector3D", "",0,0,0
+            Property: "ScalingOffset", "Vector3D", "",0,0,0
+            Property: "ScalingPivot", "Vector3D", "",0,0,0
+            Property: "TranslationActive", "bool", "",0
+            Property: "TranslationMin", "Vector3D", "",0,0,0
+            Property: "TranslationMax", "Vector3D", "",0,0,0
+            Property: "TranslationMinX", "bool", "",0
+            Property: "TranslationMinY", "bool", "",0
+            Property: "TranslationMinZ", "bool", "",0
+            Property: "TranslationMaxX", "bool", "",0
+            Property: "TranslationMaxY", "bool", "",0
+            Property: "TranslationMaxZ", "bool", "",0
+            Property: "RotationOrder", "enum", "",0
+            Property: "RotationSpaceForLimitOnly", "bool", "",0
+            Property: "RotationStiffnessX", "double", "",0
+            Property: "RotationStiffnessY", "double", "",0
+            Property: "RotationStiffnessZ", "double", "",0
+            Property: "AxisLen", "double", "",10
+            Property: "PreRotation", "Vector3D", "",0,0,0
+            Property: "PostRotation", "Vector3D", "",0,0,0
+            Property: "RotationActive", "bool", "",0
+            Property: "RotationMin", "Vector3D", "",0,0,0
+            Property: "RotationMax", "Vector3D", "",0,0,0
+            Property: "RotationMinX", "bool", "",0
+            Property: "RotationMinY", "bool", "",0
+            Property: "RotationMinZ", "bool", "",0
+            Property: "RotationMaxX", "bool", "",0
+            Property: "RotationMaxY", "bool", "",0
+            Property: "RotationMaxZ", "bool", "",0
+            Property: "InheritType", "enum", "",0
+            Property: "ScalingActive", "bool", "",0
+            Property: "ScalingMin", "Vector3D", "",1,1,1
+            Property: "ScalingMax", "Vector3D", "",1,1,1
+            Property: "ScalingMinX", "bool", "",0
+            Property: "ScalingMinY", "bool", "",0
+            Property: "ScalingMinZ", "bool", "",0
+            Property: "ScalingMaxX", "bool", "",0
+            Property: "ScalingMaxY", "bool", "",0
+            Property: "ScalingMaxZ", "bool", "",0
+            Property: "GeometricTranslation", "Vector3D", "",0,0,0
+            Property: "GeometricRotation", "Vector3D", "",0,0,0
+            Property: "GeometricScaling", "Vector3D", "",1,1,1
+            Property: "MinDampRangeX", "double", "",0
+            Property: "MinDampRangeY", "double", "",0
+            Property: "MinDampRangeZ", "double", "",0
+            Property: "MaxDampRangeX", "double", "",0
+            Property: "MaxDampRangeY", "double", "",0
+            Property: "MaxDampRangeZ", "double", "",0
+            Property: "MinDampStrengthX", "double", "",0
+            Property: "MinDampStrengthY", "double", "",0
+            Property: "MinDampStrengthZ", "double", "",0
+            Property: "MaxDampStrengthX", "double", "",0
+            Property: "MaxDampStrengthY", "double", "",0
+            Property: "MaxDampStrengthZ", "double", "",0
+            Property: "PreferedAngleX", "double", "",0
+            Property: "PreferedAngleY", "double", "",0
+            Property: "PreferedAngleZ", "double", "",0
+            Property: "LookAtProperty", "object", ""
+            Property: "UpVectorProperty", "object", ""
+            Property: "Show", "bool", "",1
+            Property: "NegativePercentShapeSupport", "bool", "",1
+            Property: "DefaultAttributeIndex", "int", "",-1
+            Property: "Lcl Translation", "Lcl Translation", "A+",0,0,0
+            Property: "Lcl Rotation", "Lcl Rotation", "A+",0,0,0
+            Property: "Lcl Scaling", "Lcl Scaling", "A+",1,1,1
+            Property: "Visibility", "Visibility", "A+",1
+        }
+        MultiLayer: 0
+        MultiTake: 1
+        Shading: Y
+        Culling: "CullingOff"
+        TypeFlags: "Null"
+    }
+    Model: "Model::Mesh1", "Mesh" {
+        Version: 232
+        Properties60:  {
+            Property: "QuaternionInterpolate", "bool", "",0
+            Property: "RotationOffset", "Vector3D", "",0,0,0
+            Property: "RotationPivot", "Vector3D", "",0,0,0
+            Property: "ScalingOffset", "Vector3D", "",0,0,0
+            Property: "ScalingPivot", "Vector3D", "",0,0,0
+            Property: "TranslationActive", "bool", "",0
+            Property: "TranslationMin", "Vector3D", "",0,0,0
+            Property: "TranslationMax", "Vector3D", "",0,0,0
+            Property: "TranslationMinX", "bool", "",0
+            Property: "TranslationMinY", "bool", "",0
+            Property: "TranslationMinZ", "bool", "",0
+            Property: "TranslationMaxX", "bool", "",0
+            Property: "TranslationMaxY", "bool", "",0
+            Property: "TranslationMaxZ", "bool", "",0
+            Property: "RotationOrder", "enum", "",0
+            Property: "RotationSpaceForLimitOnly", "bool", "",0
+            Property: "RotationStiffnessX", "double", "",0
+            Property: "RotationStiffnessY", "double", "",0
+            Property: "RotationStiffnessZ", "double", "",0
+            Property: "AxisLen", "double", "",10
+            Property: "PreRotation", "Vector3D", "",0,0,0
+            Property: "PostRotation", "Vector3D", "",0,0,0
+            Property: "RotationActive", "bool", "",0
+            Property: "RotationMin", "Vector3D", "",0,0,0
+            Property: "RotationMax", "Vector3D", "",0,0,0
+            Property: "RotationMinX", "bool", "",0
+            Property: "RotationMinY", "bool", "",0
+            Property: "RotationMinZ", "bool", "",0
+            Property: "RotationMaxX", "bool", "",0
+            Property: "RotationMaxY", "bool", "",0
+            Property: "RotationMaxZ", "bool", "",0
+            Property: "InheritType", "enum", "",0
+            Property: "ScalingActive", "bool", "",0
+            Property: "ScalingMin", "Vector3D", "",1,1,1
+            Property: "ScalingMax", "Vector3D", "",1,1,1
+            Property: "ScalingMinX", "bool", "",0
+            Property: "ScalingMinY", "bool", "",0
+            Property: "ScalingMinZ", "bool", "",0
+            Property: "ScalingMaxX", "bool", "",0
+            Property: "ScalingMaxY", "bool", "",0
+            Property: "ScalingMaxZ", "bool", "",0
+            Property: "GeometricTranslation", "Vector3D", "",0,0,0
+            Property: "GeometricRotation", "Vector3D", "",0,0,0
+            Property: "GeometricScaling", "Vector3D", "",1,1,1
+            Property: "MinDampRangeX", "double", "",0
+            Property: "MinDampRangeY", "double", "",0
+            Property: "MinDampRangeZ", "double", "",0
+            Property: "MaxDampRangeX", "double", "",0
+            Property: "MaxDampRangeY", "double", "",0
+            Property: "MaxDampRangeZ", "double", "",0
+            Property: "MinDampStrengthX", "double", "",0
+            Property: "MinDampStrengthY", "double", "",0
+            Property: "MinDampStrengthZ", "double", "",0
+            Property: "MaxDampStrengthX", "double", "",0
+            Property: "MaxDampStrengthY", "double", "",0
+            Property: "MaxDampStrengthZ", "double", "",0
+            Property: "PreferedAngleX", "double", "",0
+            Property: "PreferedAngleY", "double", "",0
+            Property: "PreferedAngleZ", "double", "",0
+            Property: "LookAtProperty", "object", ""
+            Property: "UpVectorProperty", "object", ""
+            Property: "Show", "bool", "",1
+            Property: "NegativePercentShapeSupport", "bool", "",1
+            Property: "DefaultAttributeIndex", "int", "",0
+            Property: "Lcl Translation", "Lcl Translation", "A+",0,0,0
+            Property: "Lcl Rotation", "Lcl Rotation", "A+",0,0,0
+            Property: "Lcl Scaling", "Lcl Scaling", "A+",1,1,1
+            Property: "Visibility", "Visibility", "A+",1
+            Property: "Color", "ColorRGB", "N",0.8,0.8,0.8
+            Property: "BBoxMin", "Vector3D", "N",0,0,0
+            Property: "BBoxMax", "Vector3D", "N",0,0,0
+        }
+        MultiLayer: 0
+        MultiTake: 1
+        Shading: T
+        Culling: "CullingOff"
+        Vertices: 522,0,-522,0,0,-522,0,512,-522,10,512,-522,522,512,-522,522,0,0,522,0,-522,522,512,-522,522,512,0,0,0,0,522,0,0,522
+        ,512,0,0,512,0,0,0,-522,0,0,0,0,512,0,0,512,-522,10,512,-10,10,512,-522,0,512,-522,10,512,-512,0,512,0,522,512,0,512
+        ,512,-10,512,512,-512,522,512,-522,10,512,-10,512,1,-10,10,1,-10,512,512,-10,512,512,-512,512,1,-10,512,512,-10,512
+        ,1,-512,512,512,-512,10,1,-512,512,1,-512,10,512,-512,10,1,-512,10,512,-10,10,1,-10,10,512,-512,0,0,-522,522,0,-522
+        ,522,0,0,0,0,0,10,1,-512,520.007766990291,1,-512,520.007766990291,512,-512,10,512,-512,512,1,-512,512,1,-1.0000000000001
+        ,512,512,-1.0000000000001,512,512,-512,512,1,-10,1.0000000000001,1,-10,1.0000000000001,512,-10,512,512,-10,10,1,-10
+        ,10,1,-521,10,512,-521,10,512,-10,10,1,-10,512,1,-10,512,1,-512,10,1,-512,512,512,-10,10,512,-10,10,512,-512,512,512
+        ,-512
+        PolygonVertexIndex: 0,1,2,3,-5,5,6,7,-9,9,10,11,-13,13,14,15,-17,17,18,-20,18,17,-21,21,17,-20,17,21,-23,17,22,-24,23,22,-25,24,18,-21
+        ,18,24,-26,25,24,-23,26,27,-29,27,26,-30,30,31,-33,31,30,-34,34,35,-37,35,34,-38,38,39,-41,39,38,-42,42,43,44,-46
+        ,24,20,17,-24,46,47,48,-50,50,51,52,-54,54,55,56,-58,58,59,60,-62,62,63,64,-66,66,67,68,-70
+        GeometryVersion: 124
+        LayerElementNormal: 0 {
+            Version: 101
+            Name: ""
+            MappingInformationType: "ByVertice"
+            ReferenceInformationType: "Direct"
+            Normals: 0,0,-1,0,0,-1,0,0,-1,0,0,-1,0,0,-1,1,0,-0,1,0,-0,1,0,-0,1,0,-0,0,0,1,0,0,1,0,0,1,0,0,1,-1,0,-0,-1,0,-0,-1,0,-0
+             ,-1,0,-0,0,1,-0,0,1,-0,0,1,-0,0,1,-0,0,1,-0,0,1,-0,0,1,-0,0,1,-0,0,1,-0,0,0,-1,0,0,-1,0,0,-1,0,0,-1,-1,0,-0,-1
+             ,0,-0,-1,0,-0,-1,0,-0,0,0,1,0,0,1,0,0,1,0,0,1,1,-5.10935393931081e-034,3.73898344777666e-017,1,-5.10935393931081e-034
+             ,3.73898344777666e-017,1,-5.10935393931081e-034,3.73898344777666e-017,1,-5.10935393931081e-034,3.73898344777666e-017
+             ,0,-1,-0,0,-1,-0,0,-1,-0,0,-1,-0,0,0,0.0254,0,0,0.0254,0,0,0.0254,0,0,0.0254,-0.0254,0,-0,-0.0254,0,-0,-0.0254
+             ,0,-0,-0.0254,0,-0,0,0,-0.0254,0,0,-0.0254,0,0,-0.0254,0,0,-0.0254,0.0254,0,9.4970179573527e-019,0.0254,0,9.4970179573527e-019
+             ,0.0254,0,9.4970179573527e-019,0.0254,0,9.4970179573527e-019,0,0.0254,-0,0,0.0254,-0,0,0.0254,-0,0,0.0254,-0
+             ,0,-0.0254,-0,0,-0.0254,-0,0,-0.0254,-0,0,-0.0254,-0
+        }
+        LayerElementUV: 0 {
+            Version: 101
+            Name: ""
+            MappingInformationType: "ByPolygonVertex"
+            ReferenceInformationType: "IndexToDirect"
+            UV: -20551.1811023622,0,0,0,0,20157.4803149606,-393.700787401576,20157.4803149606,-20551.1811023622,20157.4803149606
+             ,20551.1811023622,0,20551.1811023622,20157.4803149606,393.700787401575,393.700787401576,393.700787401576,20551.1811023622
+             ,0,20551.1811023622,393.700787401576,20157.4803149606,20157.4803149606,393.700787401576,20157.4803149606,20157.4803149606
+             ,20551.1811023622,20551.1811023622,-393.700787401575,20157.4803149606,-20157.4803149606,39.3700787401576,-393.700787401575
+             ,39.3700787401576,-20157.4803149606,20157.4803149606,-393.700787401576,39.3700787401576,393.700787401576,39.3700787401576
+             ,20157.4803149606,39.3700787401576,-20551.1811023622,20551.1811023622,1,0,1,1,0,1
+            UVIndex: 0,1,2,3,4,1,5,6,2,1,5,6,2,0,1,2,4,7,8,9,8,7,10,1,7,9,7,1,5,7,5,11,11,5,12,12,8,10,8,12,13,13,12,5,14,15,16,15
+             ,14,17,17,18,3,18,17,15,12,19,20,19,12,10,20,10,19,10,20,12,9,21,0,1,12,10,7,11,1,22,23,24,1,22,23,24,1,22,23
+             ,24,1,22,23,24,1,22,23,24,1,22,23,24
+        }
+        LayerElementMaterial: 0 {
+            Version: 101
+            Name: ""
+            MappingInformationType: "ByPolygon"
+            ReferenceInformationType: "IndexToDirect"
+            Materials: 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,2,3,4,5,6
+        }
+        LayerElementTexture: 0 {
+            Version: 101
+            Name: ""
+            MappingInformationType: "ByPolygon"
+            ReferenceInformationType: "IndexToDirect"
+            BlendMode: "Translucent"
+            TextureAlpha: 1
+            TextureId: -1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,0,1,2,3,4,5
+        }
+        Layer: 0 {
+            Version: 100
+            LayerElement:  {
+                Type: "LayerElementNormal"
+                TypedIndex: 0
+            }
+            LayerElement:  {
+                Type: "LayerElementMaterial"
+                TypedIndex: 0
+            }
+            LayerElement:  {
+                Type: "LayerElementTexture"
+                TypedIndex: 0
+            }
+            LayerElement:  {
+                Type: "LayerElementUV"
+                TypedIndex: 0
+            }
+        }
+        NodeAttributeName: "Geometry::Mesh1"
+    }
+    SceneInfo: "SceneInfo::GlobalInfo", "UserData" {
+        Type: "UserData"
+        Version: 100
+        MetaData:  {
+            Version: 100
+            Title: ""
+            Subject: ""
+            Author: ""
+            Keywords: ""
+            Revision: ""
+            Comment: ""
+        }
+        Properties60:  {
+            Property: "DocumentUrl", "KString", "", "C:\Users\mauricio\AppData\Local\Temp\3662.tmp.fbx"
+            Property: "SrcDocumentUrl", "KString", "", "C:\Users\mauricio\AppData\Local\Temp\3662.tmp.fbx"
+            Property: "Original", "Compound", ""
+            Property: "Original|ApplicationVendor", "KString", "", ""
+            Property: "Original|ApplicationName", "KString", "", ""
+            Property: "Original|ApplicationVersion", "KString", "", ""
+            Property: "Original|DateTime_GMT", "DateTime", "", ""
+            Property: "Original|FileName", "KString", "", ""
+            Property: "LastSaved", "Compound", ""
+            Property: "LastSaved|ApplicationVendor", "KString", "", ""
+            Property: "LastSaved|ApplicationName", "KString", "", ""
+            Property: "LastSaved|ApplicationVersion", "KString", "", ""
+            Property: "LastSaved|DateTime_GMT", "DateTime", "", ""
+        }
+    }
+    Material: "Material::front", "" {
+        Version: 102
+        ShadingModel: "phong"
+        MultiLayer: 0
+        Properties60:  {
+            Property: "ShadingModel", "KString", "", "Phong"
+            Property: "MultiLayer", "bool", "",0
+            Property: "EmissiveColor", "ColorRGB", "",0,0,0
+            Property: "EmissiveFactor", "double", "",1
+            Property: "AmbientColor", "ColorRGB", "",0,0,0
+            Property: "AmbientFactor", "double", "",1
+            Property: "DiffuseColor", "ColorRGB", "",0.501960784313725,0.501960784313725,0.501960784313725
+            Property: "DiffuseFactor", "double", "",1
+            Property: "Bump", "Vector3D", "",0,0,0
+            Property: "NormalMap", "Vector3D", "",0,0,0
+            Property: "TransparentColor", "ColorRGB", "",1,1,1
+            Property: "TransparencyFactor", "double", "",0
+            Property: "SpecularColor", "ColorRGB", "",0,0,0
+            Property: "SpecularFactor", "double", "",1
+            Property: "ShininessExponent", "double", "",20
+            Property: "ReflectionColor", "ColorRGB", "",0,0,0
+            Property: "ReflectionFactor", "double", "",0
+            Property: "Emissive", "Vector3D", "",0,0,0
+            Property: "Ambient", "Vector3D", "",0,0,0
+            Property: "Diffuse", "Vector3D", "",0.501960784313725,0.501960784313725,0.501960784313725
+            Property: "Specular", "Vector3D", "",0,0,0
+            Property: "Shininess", "double", "",20
+            Property: "Opacity", "double", "",1
+            Property: "Reflectivity", "double", "",0
+        }
+    }
+    Material: "Material::right", "" {
+        Version: 102
+        ShadingModel: "phong"
+        MultiLayer: 0
+        Properties60:  {
+            Property: "ShadingModel", "KString", "", "Phong"
+            Property: "MultiLayer", "bool", "",0
+            Property: "EmissiveColor", "ColorRGB", "",0,0,0
+            Property: "EmissiveFactor", "double", "",1
+            Property: "AmbientColor", "ColorRGB", "",0,0,0
+            Property: "AmbientFactor", "double", "",1
+            Property: "DiffuseColor", "ColorRGB", "",0.501960784313725,0.501960784313725,0.501960784313725
+            Property: "DiffuseFactor", "double", "",1
+            Property: "Bump", "Vector3D", "",0,0,0
+            Property: "NormalMap", "Vector3D", "",0,0,0
+            Property: "TransparentColor", "ColorRGB", "",1,1,1
+            Property: "TransparencyFactor", "double", "",0
+            Property: "SpecularColor", "ColorRGB", "",0,0,0
+            Property: "SpecularFactor", "double", "",1
+            Property: "ShininessExponent", "double", "",20
+            Property: "ReflectionColor", "ColorRGB", "",0,0,0
+            Property: "ReflectionFactor", "double", "",0
+            Property: "Emissive", "Vector3D", "",0,0,0
+            Property: "Ambient", "Vector3D", "",0,0,0
+            Property: "Diffuse", "Vector3D", "",0.501960784313725,0.501960784313725,0.501960784313725
+            Property: "Specular", "Vector3D", "",0,0,0
+            Property: "Shininess", "double", "",20
+            Property: "Opacity", "double", "",1
+            Property: "Reflectivity", "double", "",0
+        }
+    }
+    Material: "Material::back", "" {
+        Version: 102
+        ShadingModel: "phong"
+        MultiLayer: 0
+        Properties60:  {
+            Property: "ShadingModel", "KString", "", "Phong"
+            Property: "MultiLayer", "bool", "",0
+            Property: "EmissiveColor", "ColorRGB", "",0,0,0
+            Property: "EmissiveFactor", "double", "",1
+            Property: "AmbientColor", "ColorRGB", "",0,0,0
+            Property: "AmbientFactor", "double", "",1
+            Property: "DiffuseColor", "ColorRGB", "",0.501960784313725,0.501960784313725,0.501960784313725
+            Property: "DiffuseFactor", "double", "",1
+            Property: "Bump", "Vector3D", "",0,0,0
+            Property: "NormalMap", "Vector3D", "",0,0,0
+            Property: "TransparentColor", "ColorRGB", "",1,1,1
+            Property: "TransparencyFactor", "double", "",0
+            Property: "SpecularColor", "ColorRGB", "",0,0,0
+            Property: "SpecularFactor", "double", "",1
+            Property: "ShininessExponent", "double", "",20
+            Property: "ReflectionColor", "ColorRGB", "",0,0,0
+            Property: "ReflectionFactor", "double", "",0
+            Property: "Emissive", "Vector3D", "",0,0,0
+            Property: "Ambient", "Vector3D", "",0,0,0
+            Property: "Diffuse", "Vector3D", "",0.501960784313725,0.501960784313725,0.501960784313725
+            Property: "Specular", "Vector3D", "",0,0,0
+            Property: "Shininess", "double", "",20
+            Property: "Opacity", "double", "",1
+            Property: "Reflectivity", "double", "",0
+        }
+    }
+    Material: "Material::left", "" {
+        Version: 102
+        ShadingModel: "phong"
+        MultiLayer: 0
+        Properties60:  {
+            Property: "ShadingModel", "KString", "", "Phong"
+            Property: "MultiLayer", "bool", "",0
+            Property: "EmissiveColor", "ColorRGB", "",0,0,0
+            Property: "EmissiveFactor", "double", "",1
+            Property: "AmbientColor", "ColorRGB", "",0,0,0
+            Property: "AmbientFactor", "double", "",1
+            Property: "DiffuseColor", "ColorRGB", "",0.501960784313725,0.501960784313725,0.501960784313725
+            Property: "DiffuseFactor", "double", "",1
+            Property: "Bump", "Vector3D", "",0,0,0
+            Property: "NormalMap", "Vector3D", "",0,0,0
+            Property: "TransparentColor", "ColorRGB", "",1,1,1
+            Property: "TransparencyFactor", "double", "",0
+            Property: "SpecularColor", "ColorRGB", "",0,0,0
+            Property: "SpecularFactor", "double", "",1
+            Property: "ShininessExponent", "double", "",20
+            Property: "ReflectionColor", "ColorRGB", "",0,0,0
+            Property: "ReflectionFactor", "double", "",0
+            Property: "Emissive", "Vector3D", "",0,0,0
+            Property: "Ambient", "Vector3D", "",0,0,0
+            Property: "Diffuse", "Vector3D", "",0.501960784313725,0.501960784313725,0.501960784313725
+            Property: "Specular", "Vector3D", "",0,0,0
+            Property: "Shininess", "double", "",20
+            Property: "Opacity", "double", "",1
+            Property: "Reflectivity", "double", "",0
+        }
+    }
+    Material: "Material::floor", "" {
+        Version: 102
+        ShadingModel: "phong"
+        MultiLayer: 0
+        Properties60:  {
+            Property: "ShadingModel", "KString", "", "Phong"
+            Property: "MultiLayer", "bool", "",0
+            Property: "EmissiveColor", "ColorRGB", "",0,0,0
+            Property: "EmissiveFactor", "double", "",1
+            Property: "AmbientColor", "ColorRGB", "",0,0,0
+            Property: "AmbientFactor", "double", "",1
+            Property: "DiffuseColor", "ColorRGB", "",0.501960784313725,0.501960784313725,0.501960784313725
+            Property: "DiffuseFactor", "double", "",1
+            Property: "Bump", "Vector3D", "",0,0,0
+            Property: "NormalMap", "Vector3D", "",0,0,0
+            Property: "TransparentColor", "ColorRGB", "",1,1,1
+            Property: "TransparencyFactor", "double", "",0
+            Property: "SpecularColor", "ColorRGB", "",0,0,0
+            Property: "SpecularFactor", "double", "",1
+            Property: "ShininessExponent", "double", "",20
+            Property: "ReflectionColor", "ColorRGB", "",0,0,0
+            Property: "ReflectionFactor", "double", "",0
+            Property: "Emissive", "Vector3D", "",0,0,0
+            Property: "Ambient", "Vector3D", "",0,0,0
+            Property: "Diffuse", "Vector3D", "",0.501960784313725,0.501960784313725,0.501960784313725
+            Property: "Specular", "Vector3D", "",0,0,0
+            Property: "Shininess", "double", "",20
+            Property: "Opacity", "double", "",1
+            Property: "Reflectivity", "double", "",0
+        }
+    }
+    Material: "Material::up", "" {
+        Version: 102
+        ShadingModel: "phong"
+        MultiLayer: 0
+        Properties60:  {
+            Property: "ShadingModel", "KString", "", "Phong"
+            Property: "MultiLayer", "bool", "",0
+            Property: "EmissiveColor", "ColorRGB", "",0,0,0
+            Property: "EmissiveFactor", "double", "",1
+            Property: "AmbientColor", "ColorRGB", "",0,0,0
+            Property: "AmbientFactor", "double", "",1
+            Property: "DiffuseColor", "ColorRGB", "",0.501960784313725,0.501960784313725,0.501960784313725
+            Property: "DiffuseFactor", "double", "",1
+            Property: "Bump", "Vector3D", "",0,0,0
+            Property: "NormalMap", "Vector3D", "",0,0,0
+            Property: "TransparentColor", "ColorRGB", "",1,1,1
+            Property: "TransparencyFactor", "double", "",0
+            Property: "SpecularColor", "ColorRGB", "",0,0,0
+            Property: "SpecularFactor", "double", "",1
+            Property: "ShininessExponent", "double", "",20
+            Property: "ReflectionColor", "ColorRGB", "",0,0,0
+            Property: "ReflectionFactor", "double", "",0
+            Property: "Emissive", "Vector3D", "",0,0,0
+            Property: "Ambient", "Vector3D", "",0,0,0
+            Property: "Diffuse", "Vector3D", "",0.501960784313725,0.501960784313725,0.501960784313725
+            Property: "Specular", "Vector3D", "",0,0,0
+            Property: "Shininess", "double", "",20
+            Property: "Opacity", "double", "",1
+            Property: "Reflectivity", "double", "",0
+        }
+    }
+    Material: "Material::FrontColor", "" {
+        Version: 102
+        ShadingModel: "phong"
+        MultiLayer: 0
+        Properties60:  {
+            Property: "ShadingModel", "KString", "", "Phong"
+            Property: "MultiLayer", "bool", "",0
+            Property: "EmissiveColor", "ColorRGB", "",0,0,0
+            Property: "EmissiveFactor", "double", "",1
+            Property: "AmbientColor", "ColorRGB", "",0,0,0
+            Property: "AmbientFactor", "double", "",1
+            Property: "DiffuseColor", "ColorRGB", "",1,1,1
+            Property: "DiffuseFactor", "double", "",1
+            Property: "Bump", "Vector3D", "",0,0,0
+            Property: "NormalMap", "Vector3D", "",0,0,0
+            Property: "TransparentColor", "ColorRGB", "",1,1,1
+            Property: "TransparencyFactor", "double", "",0
+            Property: "SpecularColor", "ColorRGB", "",0.33,0.33,0.33
+            Property: "SpecularFactor", "double", "",1
+            Property: "ShininessExponent", "double", "",20
+            Property: "ReflectionColor", "ColorRGB", "",0,0,0
+            Property: "ReflectionFactor", "double", "",0
+            Property: "Emissive", "Vector3D", "",0,0,0
+            Property: "Ambient", "Vector3D", "",0,0,0
+            Property: "Diffuse", "Vector3D", "",1,1,1
+            Property: "Specular", "Vector3D", "",0.33,0.33,0.33
+            Property: "Shininess", "double", "",20
+            Property: "Opacity", "double", "",1
+            Property: "Reflectivity", "double", "",0
+        }
+    }
+    Video: "Video::right_texture", "Clip" {
+        Type: "Clip"
+        Properties60:  {
+            Property: "FrameRate", "double", "",0
+            Property: "LastFrame", "int", "",0
+            Property: "Width", "int", "",0
+            Property: "Height", "int", "",0
+            Property: "Path", "KString", "", "skybox/right.jpg"
+            Property: "StartFrame", "int", "",0
+            Property: "StopFrame", "int", "",0
+            Property: "PlaySpeed", "double", "",0
+            Property: "Offset", "KTime", "",0
+            Property: "InterlaceMode", "enum", "",0
+            Property: "FreeRunning", "bool", "",0
+            Property: "Loop", "bool", "",0
+            Property: "AccessMode", "enum", "",0
+        }
+        UseMipMap: 0
+        Filename: "skybox/right.jpg"
+        RelativeFilename: "..\Textures\skybox\right.jpg"
+    }
+    Video: "Video::back_texture", "Clip" {
+        Type: "Clip"
+        Properties60:  {
+            Property: "FrameRate", "double", "",0
+            Property: "LastFrame", "int", "",0
+            Property: "Width", "int", "",0
+            Property: "Height", "int", "",0
+            Property: "Path", "KString", "", "skybox/back.jpg"
+            Property: "StartFrame", "int", "",0
+            Property: "StopFrame", "int", "",0
+            Property: "PlaySpeed", "double", "",0
+            Property: "Offset", "KTime", "",0
+            Property: "InterlaceMode", "enum", "",0
+            Property: "FreeRunning", "bool", "",0
+            Property: "Loop", "bool", "",0
+            Property: "AccessMode", "enum", "",0
+        }
+        UseMipMap: 0
+        Filename: "skybox/back.jpg"
+        RelativeFilename: "..\Textures\skybox\back.jpg"
+    }
+    Video: "Video::left_texture", "Clip" {
+        Type: "Clip"
+        Properties60:  {
+            Property: "FrameRate", "double", "",0
+            Property: "LastFrame", "int", "",0
+            Property: "Width", "int", "",0
+            Property: "Height", "int", "",0
+            Property: "Path", "KString", "", "skybox/left.jpg"
+            Property: "StartFrame", "int", "",0
+            Property: "StopFrame", "int", "",0
+            Property: "PlaySpeed", "double", "",0
+            Property: "Offset", "KTime", "",0
+            Property: "InterlaceMode", "enum", "",0
+            Property: "FreeRunning", "bool", "",0
+            Property: "Loop", "bool", "",0
+            Property: "AccessMode", "enum", "",0
+        }
+        UseMipMap: 0
+        Filename: "skybox/left.jpg"
+        RelativeFilename: "..\Textures\skybox\left.jpg"
+    }
+    Video: "Video::floor_texture", "Clip" {
+        Type: "Clip"
+        Properties60:  {
+            Property: "FrameRate", "double", "",0
+            Property: "LastFrame", "int", "",0
+            Property: "Width", "int", "",0
+            Property: "Height", "int", "",0
+            Property: "Path", "KString", "", "skybox/floor.jpg"
+            Property: "StartFrame", "int", "",0
+            Property: "StopFrame", "int", "",0
+            Property: "PlaySpeed", "double", "",0
+            Property: "Offset", "KTime", "",0
+            Property: "InterlaceMode", "enum", "",0
+            Property: "FreeRunning", "bool", "",0
+            Property: "Loop", "bool", "",0
+            Property: "AccessMode", "enum", "",0
+        }
+        UseMipMap: 0
+        Filename: "skybox/floor.jpg"
+        RelativeFilename: "..\Textures\skybox\floor.jpg"
+    }
+    Video: "Video::up_texture", "Clip" {
+        Type: "Clip"
+        Properties60:  {
+            Property: "FrameRate", "double", "",0
+            Property: "LastFrame", "int", "",0
+            Property: "Width", "int", "",0
+            Property: "Height", "int", "",0
+            Property: "Path", "KString", "", "skybox/up.jpg"
+            Property: "StartFrame", "int", "",0
+            Property: "StopFrame", "int", "",0
+            Property: "PlaySpeed", "double", "",0
+            Property: "Offset", "KTime", "",0
+            Property: "InterlaceMode", "enum", "",0
+            Property: "FreeRunning", "bool", "",0
+            Property: "Loop", "bool", "",0
+            Property: "AccessMode", "enum", "",0
+        }
+        UseMipMap: 0
+        Filename: "skybox/up.jpg"
+        RelativeFilename: "..\Textures\skybox\up.jpg"
+    }
+    Video: "Video::front_texture", "Clip" {
+        Type: "Clip"
+        Properties60:  {
+            Property: "FrameRate", "double", "",0
+            Property: "LastFrame", "int", "",0
+            Property: "Width", "int", "",0
+            Property: "Height", "int", "",0
+            Property: "Path", "KString", "", "skybox/front.jpg"
+            Property: "StartFrame", "int", "",0
+            Property: "StopFrame", "int", "",0
+            Property: "PlaySpeed", "double", "",0
+            Property: "Offset", "KTime", "",0
+            Property: "InterlaceMode", "enum", "",0
+            Property: "FreeRunning", "bool", "",0
+            Property: "Loop", "bool", "",0
+            Property: "AccessMode", "enum", "",0
+        }
+        UseMipMap: 0
+        Filename: "skybox/front.jpg"
+        RelativeFilename: "..\Textures\skybox\front.jpg"
+    }
+    Texture: "Texture::right_texture", "" {
+        Type: "TextureVideoClip"
+        Version: 202
+        TextureName: "Texture::right_texture"
+        Properties60:  {
+            Property: "TextureTypeUse", "enum", "",0
+            Property: "Texture alpha", "Number", "A+",1
+            Property: "CurrentMappingType", "enum", "",0
+            Property: "WrapModeU", "enum", "",0
+            Property: "WrapModeV", "enum", "",0
+            Property: "UVSwap", "bool", "",0
+            Property: "Translation", "Vector", "A+",0,0,0
+            Property: "Rotation", "Vector", "A+",0,0,0
+            Property: "Scaling", "Vector", "A+",1,1,1
+            Property: "TextureRotationPivot", "Vector3D", "",0,0,0
+            Property: "TextureScalingPivot", "Vector3D", "",0,0,0
+            Property: "UseMaterial", "bool", "",0
+            Property: "UseMipMap", "bool", "",0
+            Property: "CurrentTextureBlendMode", "enum", "",1
+            Property: "UVSet", "KString", "", "default"
+        }
+        Media: "Video::right_texture"
+        FileName: "skybox/right.jpg"
+        RelativeFilename: "..\Textures\skybox\right.jpg"
+        ModelUVTranslation: 0,0
+        ModelUVScaling: 1,1
+        Texture_Alpha_Source: "None"
+        Cropping: 0,0,0,0
+    }
+    Texture: "Texture::back_texture", "" {
+        Type: "TextureVideoClip"
+        Version: 202
+        TextureName: "Texture::back_texture"
+        Properties60:  {
+            Property: "TextureTypeUse", "enum", "",0
+            Property: "Texture alpha", "Number", "A+",1
+            Property: "CurrentMappingType", "enum", "",0
+            Property: "WrapModeU", "enum", "",0
+            Property: "WrapModeV", "enum", "",0
+            Property: "UVSwap", "bool", "",0
+            Property: "Translation", "Vector", "A+",0,0,0
+            Property: "Rotation", "Vector", "A+",0,0,0
+            Property: "Scaling", "Vector", "A+",1,1,1
+            Property: "TextureRotationPivot", "Vector3D", "",0,0,0
+            Property: "TextureScalingPivot", "Vector3D", "",0,0,0
+            Property: "UseMaterial", "bool", "",0
+            Property: "UseMipMap", "bool", "",0
+            Property: "CurrentTextureBlendMode", "enum", "",1
+            Property: "UVSet", "KString", "", "default"
+        }
+        Media: "Video::back_texture"
+        FileName: "skybox/back.jpg"
+        RelativeFilename: "..\Textures\skybox\back.jpg"
+        ModelUVTranslation: 0,0
+        ModelUVScaling: 1,1
+        Texture_Alpha_Source: "None"
+        Cropping: 0,0,0,0
+    }
+    Texture: "Texture::left_texture", "" {
+        Type: "TextureVideoClip"
+        Version: 202
+        TextureName: "Texture::left_texture"
+        Properties60:  {
+            Property: "TextureTypeUse", "enum", "",0
+            Property: "Texture alpha", "Number", "A+",1
+            Property: "CurrentMappingType", "enum", "",0
+            Property: "WrapModeU", "enum", "",0
+            Property: "WrapModeV", "enum", "",0
+            Property: "UVSwap", "bool", "",0
+            Property: "Translation", "Vector", "A+",0,0,0
+            Property: "Rotation", "Vector", "A+",0,0,0
+            Property: "Scaling", "Vector", "A+",1,1,1
+            Property: "TextureRotationPivot", "Vector3D", "",0,0,0
+            Property: "TextureScalingPivot", "Vector3D", "",0,0,0
+            Property: "UseMaterial", "bool", "",0
+            Property: "UseMipMap", "bool", "",0
+            Property: "CurrentTextureBlendMode", "enum", "",1
+            Property: "UVSet", "KString", "", "default"
+        }
+        Media: "Video::left_texture"
+        FileName: "skybox/left.jpg"
+        RelativeFilename: "..\Textures\skybox\left.jpg"
+        ModelUVTranslation: 0,0
+        ModelUVScaling: 1,1
+        Texture_Alpha_Source: "None"
+        Cropping: 0,0,0,0
+    }
+    Texture: "Texture::floor_texture", "" {
+        Type: "TextureVideoClip"
+        Version: 202
+        TextureName: "Texture::floor_texture"
+        Properties60:  {
+            Property: "TextureTypeUse", "enum", "",0
+            Property: "Texture alpha", "Number", "A+",1
+            Property: "CurrentMappingType", "enum", "",0
+            Property: "WrapModeU", "enum", "",0
+            Property: "WrapModeV", "enum", "",0
+            Property: "UVSwap", "bool", "",0
+            Property: "Translation", "Vector", "A+",0,0,0
+            Property: "Rotation", "Vector", "A+",0,0,0
+            Property: "Scaling", "Vector", "A+",1,1,1
+            Property: "TextureRotationPivot", "Vector3D", "",0,0,0
+            Property: "TextureScalingPivot", "Vector3D", "",0,0,0
+            Property: "UseMaterial", "bool", "",0
+            Property: "UseMipMap", "bool", "",0
+            Property: "CurrentTextureBlendMode", "enum", "",1
+            Property: "UVSet", "KString", "", "default"
+        }
+        Media: "Video::floor_texture"
+        FileName: "skybox/floor.jpg"
+        RelativeFilename: "..\Textures\skybox\floor.jpg"
+        ModelUVTranslation: 0,0
+        ModelUVScaling: 1,1
+        Texture_Alpha_Source: "None"
+        Cropping: 0,0,0,0
+    }
+    Texture: "Texture::up_texture", "" {
+        Type: "TextureVideoClip"
+        Version: 202
+        TextureName: "Texture::up_texture"
+        Properties60:  {
+            Property: "TextureTypeUse", "enum", "",0
+            Property: "Texture alpha", "Number", "A+",1
+            Property: "CurrentMappingType", "enum", "",0
+            Property: "WrapModeU", "enum", "",0
+            Property: "WrapModeV", "enum", "",0
+            Property: "UVSwap", "bool", "",0
+            Property: "Translation", "Vector", "A+",0,0,0
+            Property: "Rotation", "Vector", "A+",0,0,0
+            Property: "Scaling", "Vector", "A+",1,1,1
+            Property: "TextureRotationPivot", "Vector3D", "",0,0,0
+            Property: "TextureScalingPivot", "Vector3D", "",0,0,0
+            Property: "UseMaterial", "bool", "",0
+            Property: "UseMipMap", "bool", "",0
+            Property: "CurrentTextureBlendMode", "enum", "",1
+            Property: "UVSet", "KString", "", "default"
+        }
+        Media: "Video::up_texture"
+        FileName: "skybox/up.jpg"
+        RelativeFilename: "..\Textures\skybox\up.jpg"
+        ModelUVTranslation: 0,0
+        ModelUVScaling: 1,1
+        Texture_Alpha_Source: "None"
+        Cropping: 0,0,0,0
+    }
+    Texture: "Texture::front_texture", "" {
+        Type: "TextureVideoClip"
+        Version: 202
+        TextureName: "Texture::front_texture"
+        Properties60:  {
+            Property: "TextureTypeUse", "enum", "",0
+            Property: "Texture alpha", "Number", "A+",1
+            Property: "CurrentMappingType", "enum", "",0
+            Property: "WrapModeU", "enum", "",0
+            Property: "WrapModeV", "enum", "",0
+            Property: "UVSwap", "bool", "",0
+            Property: "Translation", "Vector", "A+",0,0,0
+            Property: "Rotation", "Vector", "A+",0,0,0
+            Property: "Scaling", "Vector", "A+",1,1,1
+            Property: "TextureRotationPivot", "Vector3D", "",0,0,0
+            Property: "TextureScalingPivot", "Vector3D", "",0,0,0
+            Property: "UseMaterial", "bool", "",0
+            Property: "UseMipMap", "bool", "",0
+            Property: "CurrentTextureBlendMode", "enum", "",1
+            Property: "UVSet", "KString", "", "default"
+        }
+        Media: "Video::front_texture"
+        FileName: "skybox/front.jpg"
+        RelativeFilename: "..\Textures\skybox\front.jpg"
+        ModelUVTranslation: 0,0
+        ModelUVScaling: 1,1
+        Texture_Alpha_Source: "None"
+        Cropping: 0,0,0,0
+    }
+    GlobalSettings:  {
+        Version: 1000
+        Properties60:  {
+            Property: "UpAxis", "int", "",1
+            Property: "UpAxisSign", "int", "",1
+            Property: "FrontAxis", "int", "",2
+            Property: "FrontAxisSign", "int", "",1
+            Property: "CoordAxis", "int", "",0
+            Property: "CoordAxisSign", "int", "",1
+            Property: "UnitScaleFactor", "double", "",1
+        }
+    }
+}
+
+; Object connections
+;------------------------------------------------------------------
+
+Connections:  {
+    Connect: "OO", "Model::Model", "Model::Scene"
+    Connect: "OO", "Model::Mesh1", "Model::Model"
+    Connect: "OO", "Material::FrontColor", "Model::Mesh1"
+    Connect: "OO", "Material::front", "Model::Mesh1"
+    Connect: "OO", "Material::right", "Model::Mesh1"
+    Connect: "OO", "Material::back", "Model::Mesh1"
+    Connect: "OO", "Material::left", "Model::Mesh1"
+    Connect: "OO", "Material::floor", "Model::Mesh1"
+    Connect: "OO", "Material::up", "Model::Mesh1"
+    Connect: "OO", "Texture::front_texture", "Model::Mesh1"
+    Connect: "OO", "Texture::right_texture", "Model::Mesh1"
+    Connect: "OO", "Texture::back_texture", "Model::Mesh1"
+    Connect: "OO", "Texture::left_texture", "Model::Mesh1"
+    Connect: "OO", "Texture::floor_texture", "Model::Mesh1"
+    Connect: "OO", "Texture::up_texture", "Model::Mesh1"
+    Connect: "OO", "Video::front_texture", "Texture::front_texture"
+    Connect: "OO", "Video::right_texture", "Texture::right_texture"
+    Connect: "OO", "Video::back_texture", "Texture::back_texture"
+    Connect: "OO", "Video::left_texture", "Texture::left_texture"
+    Connect: "OO", "Video::floor_texture", "Texture::floor_texture"
+    Connect: "OO", "Video::up_texture", "Texture::up_texture"
+}
+;Takes and animation section
+;----------------------------------------------------
+
+Takes:  {
+    Current: ""
+}
+;Version 5 settings
+;------------------------------------------------------------------
+
+Version5:  {
+    AmbientRenderSettings:  {
+        Version: 101
+        AmbientLightColor: 0.4,0.4,0.4,0
+    }
+    FogOptions:  {
+        FlogEnable: 0
+        FogMode: 0
+        FogDensity: 0.002
+        FogStart: 0.3
+        FogEnd: 1000
+        FogColor: 1,1,1,1
+    }
+    Settings:  {
+        FrameRate: "30"
+        TimeFormat: 1
+        SnapOnFrames: 0
+        ReferenceTimeIndex: -1
+        TimeLineStartTime: 0
+        TimeLineStopTime: 46186158000
+    }
+    RendererSetting:  {
+        DefaultCamera: ""
+        DefaultViewingMode: 0
+    }
+}
