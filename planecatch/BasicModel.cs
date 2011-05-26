@@ -10,6 +10,8 @@ namespace planecatch
     public class BasicModel
     {
         public Model Model { get; protected set; }
+        public BoundingBox BoundingBox {get { return new BoundingBox(); }}
+        
         protected Matrix World = Matrix.Identity;
 
         public BasicModel(Model model)

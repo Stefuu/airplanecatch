@@ -17,14 +17,14 @@ namespace planecatch
     /// <summary>
     /// This is a game component that implements IUpdateable.
     /// </summary>
-    public class ModelManager : DrawableGameComponent
+    public class ModelManager : DrawableGameComponent, IModelManager
     {
-        List<BasicModel> _models = new List<BasicModel>();
+        public List<BasicModel> Models { get; private set; }
 
         public ModelManager(Game game)
             : base(game)
         {
-            // TODO: Construct any child components here
+            Game.Services.AddService(typeof(IModelManager), this);
         }
 
         /// <summary>
@@ -34,14 +34,15 @@ namespace planecatch
         public override void Initialize()
         {
             // TODO: Add your initialization code here
+            Models = new List<BasicModel>();
 
             base.Initialize();
         }
 
         protected override void LoadContent()
         {
-            _models.Add(new Skybox(Game.Content.Load<Model>("Models\\skybox")));
-            _models.Add(new BasicModel(Game.Content.Load<Model>("Models\\airport")));
+            Models.Add(new Skybox(Game.Content.Load<Model>("Models\\skybox")));
+            Models.Add(new BasicModel(Game.Content.Load<Model>("Models\\airport")));
 
             base.LoadContent();
         }
@@ -52,7 +53,7 @@ namespace planecatch
         /// <param name="gameTime">Provides a snapshot of timing values.</param>
         public override void Update(GameTime gameTime)
         {
-            foreach (var basicModel in _models)
+            foreach (var basicModel in Models)
             {
                 basicModel.Update();   
             }
@@ -62,7 +63,7 @@ namespace planecatch
 
         public override void Draw(GameTime gameTime)
         {
-            foreach (var basicModel in _models)
+            foreach (var basicModel in Models)
             {
                 basicModel.Draw(((PlaneCatchGame)Game).Camera, Game.GraphicsDevice);
             }

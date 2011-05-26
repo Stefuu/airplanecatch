@@ -38,7 +38,7 @@
     <Compile Include="Models\airport.fbx">
       <Name>airport</Name>
       <Importer>FbxImporter</Importer>
-      <Processor>ModelProcessor</Processor>
+      <Processor>PerMeshBoundingBoxContentProcessor</Processor>
     </Compile>
   </ItemGroup>
   <ItemGroup>
@@ -98,7 +98,7 @@
     <Compile Include="Models\skybox.fbx">
       <Name>skybox</Name>
       <Importer>FbxImporter</Importer>
-      <Processor>ModelProcessor</Processor>
+      <Processor>PerMeshBoundingBoxContentProcessor</Processor>
     </Compile>
   </ItemGroup>
   <ItemGroup>
@@ -119,6 +119,12 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
     </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Extensions\Extensions.csproj">
+      <Project>{1E3802B0-A255-4FA1-B3E5-60E86565B288}</Project>
+      <Name>Extensions</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Microsoft\XNA Game Studio\v3.0\Microsoft.Xna.GameStudio.ContentPipeline.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
