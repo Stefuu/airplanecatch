@@ -95,6 +95,7 @@
     <Compile Include="Program.cs" />
     <Compile Include="PlaneCatchGame.cs" />
     <Compile Include="Running.cs" />
+    <Compile Include="Skybox.cs" />
     <Compile Include="Walking.cs" />
   </ItemGroup>
   <ItemGroup>

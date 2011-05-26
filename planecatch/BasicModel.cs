@@ -26,8 +26,13 @@ namespace planecatch
         {
             return World;
         }
+        
+        public virtual void Draw(Camera camera)
+        {
+            Draw(camera, null);
+        }
 
-        public void Draw(Camera camera)
+        public virtual void Draw(Camera camera, GraphicsDevice device)
         {
             var transforms = new Matrix[Model.Bones.Count];
             Model.CopyAbsoluteBoneTransformsTo(transforms);
@@ -44,7 +49,6 @@ namespace planecatch
 
                 mesh.Draw();
             }
-
         }
     }
 }
