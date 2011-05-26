@@ -4,26 +4,50 @@ namespace planecatch
 {
     public class Collision : GameComponent
     {
+        private Vector3 _lastPosition;
+
         private PlaneCatchGame PlaneCatchGame { get { return (PlaneCatchGame)Game; } }
 
 
         public Collision(Game game) : base(game)
         {
+            
+        }
+
+        public override void Initialize()
+        {
+            _lastPosition = PlaneCatchGame.Camera.Position;
+
+            base.Initialize();
         }
 
         public override void Update(GameTime gameTime)
         {
+            //Todo: alterar para usar os services
             var player = PlaneCatchGame.Camera;
 
+            var modelManager = (IModelManager)Game.Services.GetService(typeof(IModelManager));
+            
+            ModelCollision(modelManager, player);
 
-            //TODO: Alterar de 0 para o y do objeto diretamente abaixo.
-            if (player.Position.Y > 1.6f) return;
-
-            player.Velocity = new Vector3(player.Velocity.X, 0, player.Velocity.Z);
-            player.Position = new Vector3(player.Position.X, 1.6f, player.Position.Z);
-            player.Jumping = false;
+            _lastPosition = PlaneCatchGame.Camera.Position;
 
             base.Update(gameTime);
+        }
+
+        private void ModelCollision(IModelManager modelManager, Camera player)
+        {
+            foreach (BasicModel basicModel in modelManager.Models)
+            {
+                if (basicModel.ToString() == "planecatch.Skybox")
+                    continue;
+
+                var boundingBox = (BoundingBox)basicModel.Model.Tag;
+
+                if (boundingBox.Contains(player.BoundingShpere) == ContainmentType.Disjoint) continue;
+                
+                player.Position = _lastPosition;
+            }
         }
     }
 }

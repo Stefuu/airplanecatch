@@ -37,8 +37,20 @@ namespace planecatch
         private MouseState _previousMouseState;
         private IPlayerState _walkingState;
         private IPlayerState _runningState;
-        
-        
+
+        public BoundingSphere BoundingShpere{
+            get{
+                return new BoundingSphere(GetCenter(), 1.6f);
+            }
+        }
+
+        private Vector3 GetCenter()
+        {
+            var size = new Vector3(0.5f, 1.6f, 0.3f);
+            return Position + (size/2);
+        }
+
+
         public Camera(Game game, Vector3 position, Vector3 target, Vector3 up) : base(game)
         {
             Position = position;
@@ -113,8 +125,8 @@ namespace planecatch
 
         private void Jump()
         {
-            Velocity += new Vector3(0, 10, 0);
-            Jumping = true;
+            //Velocity += new Vector3(0, 10, 0);
+            //Jumping = true;
         }
 
         private void StrafeRight()

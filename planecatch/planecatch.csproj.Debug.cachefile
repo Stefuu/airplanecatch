@@ -1,3 +1,4 @@
+Content\Models\skyboxold2.xnb
 Content\Textures\floor.xnb
 Content\Textures\airport.xnb
 Content\Textures\skybox\back.xnb
@@ -6,11 +7,9 @@ Content\Textures\skybox\front.xnb
 Content\Textures\skybox\left.xnb
 Content\Textures\skybox\right.xnb
 Content\Textures\skybox\up.xnb
-Content\Models\airport.xnb
-Content\Models\skyboxold2.xnb
-Content\Models\skybox.xnb
 Content\Textures\airport\Asphalt_Stamped_Brick.xnb
 Content\Textures\airport\Translucent_Glass_Tinted.xnb
+Content\Textures\skybox\Asphalt_New.xnb
 Content\Textures\airport\Asphalt_Stamped_Brick_0.xnb
 Content\Textures\airport\Translucent_Glass_Tinted_0.xnb
 Content\Textures\skybox\front_0.xnb
@@ -19,5 +18,6 @@ Content\Textures\skybox\back_0.xnb
 Content\Textures\skybox\left_0.xnb
 Content\Textures\skybox\floor_0.xnb
 Content\Textures\skybox\up_0.xnb
-Content\Textures\skybox\Asphalt_New.xnb
 Content\Textures\skybox\Asphalt_New_0.xnb
+Content\Models\airport.xnb
+Content\Models\skybox.xnb

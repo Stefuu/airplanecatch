@@ -88,6 +88,7 @@
     <Compile Include="Camera.cs" />
     <Compile Include="Collision.cs" />
     <Compile Include="Gravity.cs" />
+    <Compile Include="IModelManager.cs" />
     <Compile Include="InputHelper.cs" />
     <Compile Include="IPlayerState.cs" />
     <Compile Include="ModelManager.cs" />
@@ -144,6 +145,12 @@
       <ProductName>Microsoft XNA Framework Redistributable 3.0</ProductName>
       <Install>true</Install>
     </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Extensions\Extensions.csproj">
+      <Project>{1E3802B0-A255-4FA1-B3E5-60E86565B288}</Project>
+      <Name>Extensions</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <Import Project="$(MSBuildExtensionsPath)\Microsoft\XNA Game Studio\Microsoft.Xna.GameStudio.targets" />
